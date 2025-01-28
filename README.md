@@ -1,32 +1,38 @@
 # Task Manager
 
-A simple web-based Task Manager application that allows users to **Create, Read, Update, and Delete (CRUD) tasks**. This application has a **frontend (HTML, CSS, JavaScript)** and a **backend (Node.js, Express, MySQL)**.
+A simple web-based Task Manager application that allows users to **Create, Read, Update, and Delete (CRUD) tasks**. This application has a **frontend (HTML, CSS, JavaScript)** and a **backend (Node.js, Express, MySQL)** deployed on **Railway and Netlify**.
 
-## Features
-- ✅ Add new tasks
-- ✅ Edit existing tasks with a **popup modal**
-- ✅ Delete tasks
-- ✅ Real-time UI updates with **notifications**
-- ✅ Backend API with **Express & MySQL**
-- ✅ Clean **folder structure**
+## **🚀 Live Demo**
+- **Frontend:** [Task Manager UI](https://transcendent-starlight-b0fa02.netlify.app/)
+- **Backend API:** [Task Manager API](https://task-manager-production-1d83.up.railway.app/tasks)
 
 ---
 
-## 🚀 Tech Stack
+## **📌 Features**
+✅ **Add new tasks**
+✅ **Edit tasks using a popup modal**
+✅ **Delete tasks**
+✅ **Mark tasks as completed/incomplete**
+✅ **Real-time UI updates with notifications**
+✅ **Mobile Responsive Design**
+✅ **Backend API with Express & MySQL (Aiven)**
 
+---
+
+## **🚀 Tech Stack**
 ### **Frontend**
-- HTML, CSS, JavaScript (Vanilla)
-- Responsive UI
-- Notifications & Modals for better UX
+- HTML, CSS, JavaScript
+- Responsive UI with CSS Media Queries
+- Toast notifications for better UX
 
 ### **Backend**
 - Node.js & Express.js
-- MySQL Database
-- RESTful API
+- MySQL Database (Hosted on Aiven)
+- RESTful API deployed on Railway
 
 ---
 
-## 📂 Project Structure
+## **📂 Project Structure**
 ```sh
 task-manager/
 │── client/               # Frontend
@@ -40,7 +46,6 @@ task-manager/
 │   ├── routes/           # API routes
 │   ├── node_modules/     # Node dependencies
 │   ├── package.json      # Node package file
-│   ├── package-lock.json # Package lock file
 │   ├── server.js         # Main Express Server
 │
 │── README.md             # Documentation
@@ -48,7 +53,7 @@ task-manager/
 
 ---
 
-## ⚙️ Setup Instructions
+## **⚙️ Setup Instructions**
 
 ### **1️⃣ Prerequisites**
 Make sure you have the following installed:
@@ -68,7 +73,7 @@ cd server
 npm install
 ```
 
-### **4️⃣ Set Up MySQL Database**
+### **4️⃣ Set Up MySQL Database** (For Local Development)
 ```sh
 mysql -u root -p
 CREATE DATABASE task_manager_db;
@@ -82,11 +87,18 @@ CREATE TABLE tasks (
 );
 ```
 
-Update `server/config/db.config.js` with your MySQL credentials.
+Update `server/.env` with your MySQL credentials:
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=root
+DB_NAME=task_manager_db
+DB_PORT=3306
+```
 
 ---
 
-## ▶️ Running the Application
+## **▶️ Running the Application**
 
 ### **5️⃣ Start the Backend Server**
 ```sh
@@ -106,7 +118,7 @@ code client
 
 ---
 
-## 🔗 API Endpoints
+## **🔗 API Endpoints**
 ```sh
 GET    /tasks        # Get all tasks
 POST   /tasks        # Add a new task
@@ -116,47 +128,41 @@ DELETE /tasks/:id    # Delete a task
 
 ---
 
-## 📌 Deployment (Optional)
+## **📌 Deployment Details**
+### **🌎 Backend (Railway + Aiven MySQL)**
+- Hosted on [Railway](https://railway.app/)
+- Database hosted on [Aiven MySQL](https://aiven.io/)
 
-### **🌎 Deploy Backend**
-```sh
-git push heroku main
-```
-Set up a **MySQL Database on AWS, Supabase, or PlanetScale**.
-
-### **🌍 Deploy Frontend**
-```sh
-git push origin main
-```
-Use **Netlify, Vercel, or GitHub Pages**.
-Ensure `script.js` points to the **deployed backend URL**.
+### **🌍 Frontend (Netlify)**
+- Hosted on [Netlify](https://www.netlify.com/)
+- Updated API URL in `script.js` to use live backend
 
 ---
 
-## 🎥 Submission Instructions
+## **🎥 Submission Instructions**
 ```sh
 git add .
-git commit -m "Initial commit"
+git commit -m "Updated README and final deployment details"
 git push origin main
 ```
 Record a **Video Demo** *(using Loom or OBS)* and submit to `hr@theexpertscloud.com` with **GitHub link + Video walkthrough**.
 
 ---
 
-## 🎯 Future Enhancements
-- 🔒 **Authentication** (Login/Signup)
-- 📅 **Due Dates** for tasks
+## **🎯 Future Enhancements**
+- 🔒 **Authentication** (User login/signup)
+- 📅 **Due Dates for tasks**
 - 🔍 **Search & Filters**
-- 📱 **Mobile Responsive UI**
+- 📱 **More UI Improvements**
 
 ---
 
-## 🙌 Contributing
+## **🙌 Contributing**
 Contributions are welcome! Feel free to **fork** and submit a **pull request**. 😊
 
 ---
 
-## 📝 License
+## **📝 License**
 This project is open-source and available under the **MIT License**.
 
 ---
