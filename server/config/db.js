@@ -12,7 +12,7 @@ const dbConfig = {
     waitForConnections: true,
     connectionLimit: 10, // Allows multiple connections
     queueLimit: 0,
-    ssl: isProduction ? { rejectUnauthorized: true } : false, // Required for Aiven MySQL
+    ssl: isProduction ? { rejectUnauthorized: false } : false // Fixes self-signed certificate issue
 };
 
 // Use createPool instead of createConnection
@@ -20,7 +20,7 @@ const db = mysql.createPool(dbConfig);
 
 db.getConnection((err, connection) => {
     if (err) {
-        console.error('Database connection failed:', err.stack);
+        console.error('Database connection failed:', err);
         return;
     }
     console.log(`Connected to ${isProduction ? 'Aiven MySQL' : 'local MySQL'} database`);
