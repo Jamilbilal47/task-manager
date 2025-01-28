@@ -171,3 +171,50 @@ button:hover {
     background: #dc3545;
     color: white;
 }
+
+/* 📱 Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        max-width: none;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .task-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .task-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .task-buttons button {
+        width: 48%;
+        font-size: 0.9rem;
+    }
+}
