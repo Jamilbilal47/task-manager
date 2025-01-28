@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentEditingTaskId = null;
     let currentEditingTaskElement = null;
 
-    const API_URL = 'http://localhost:3000/tasks';
+    // const API_URL = 'http://localhost:3000/tasks'; //use this for local env
+    const API_URL = "https://task-manager-production-1d83.up.railway.app/tasks";
 
     // Function to show notifications
     function showNotification(message, type = 'success') {
